@@ -1,94 +1,30 @@
 # lebusmagique-assets-old
 
-> Assets legacy (Grunt · SCSS · JS) — à archiver
+## Role du projet
 
-## Stack technique
+Ancienne base d’assets front-end du Bus Magique (Grunt/SCSS/JS).
+Le dépôt est historique et remplacé fonctionnellement par `lebusmagique-assets`.
 
-JavaScript / HTML / CSS
+## Statut
 
-## Installation
+- **Etat** : A archiver
+- **Stack** : Grunt, JavaScript, SCSS
+- **Contexte** : legacy, à conserver uniquement comme source de récupération
 
-```bash
-git clone https://github.com/LeBusMagique/lebusmagique-assets-old.git
-cd lebusmagique-assets-old
-```
+## Ce que contient le dépôt
 
-```bash
-npm install
-npm run dev
-```
+- Outils front historiques (timers, embeds, composants d’époque).
+- Documentation HTML locale sous `documentation/`.
+- Configuration déploiement héritée (`netlify.toml`).
 
+## Risques / dette identifiés
 
-## Scripts disponibles
+- Stack obsolète, coût de maintenance élevé.
+- Confusion possible entre version legacy et version actuelle des assets.
+- Dépendances non alignées avec la chaîne moderne Vue/Vite.
 
-```bash
-npm run build  # grunt build
-```
+## Plan recommandé
 
-## Dépendances principales
-
-`clipboard`, `lity`, `moment`
-
-
-## Structure du projet
-
-- `.gitignore`
-- `Gruntfile.js`
-- `documentation/cclnprix.html`
-- `documentation/check-achievements.html`
-- `documentation/copybutton.html`
-- `documentation/discord-events.html`
-- `documentation/embedrecipe.html`
-- `documentation/farm-cles.html`
-- `documentation/guild-decorations.html`
-- `documentation/guild-upgrades.html`
-- `documentation/gw2tooltip.html`
-- `documentation/home-cats.html`
-- `documentation/home-nodes.html`
-- `documentation/hotpofbreadcrumb.html`
-- `documentation/index.html`
-- `documentation/inventory-mk.html`
-- `documentation/itemstats.html`
-- `documentation/lity.html`
-- `documentation/mounts.html`
-- `documentation/navigation.html`
-- `documentation/raidplanner.html`
-- `documentation/sab.html`
-- `documentation/sommaire.html`
-- `documentation/themes.html`
-- `documentation/timers.html`
-- `documentation/timersworldboss.html`
-- `documentation/titles.html`
-- `documentation/topbottom.html`
-- `documentation/twitch.html`
-- `netlify.toml`
-
-## README original
-
-# Assets du Bus Magique
-
-Ce dépôt permet de gérer les ressources scripts et styles globaux du site du Bus Magique.
-
-Il utilise des outils pour la génération, la vérification et la minification du code.
-
-## Utilisation de GruntJS
-
-Afin d'exécuter les tâches paramétrées, il est nécessaire d'installer GruntJS (Node est requis) :
-
-`$ npm install -g grunt-cli`
-
-Ensuite, il faut installer les modules :
-
-`$ npm install`
-
-Pour générer les fichiers automatiquement pendant qu'ils sont modifiés, utiliser :
-
-`$ grunt watch`
-
-Pour générer les fichiers manuellement :
-
-`$ grunt build`
-
----
-
-_Documentation générée automatiquement — 2026-05-22_
+- Vérifier qu’aucune page en production ne dépend encore de ces assets.
+- Migrer les éléments encore utiles vers `lebusmagique-assets`.
+- Archiver le dépôt sur GitHub après validation opérationnelle.

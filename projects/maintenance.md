@@ -1,33 +1,21 @@
 # maintenance
 
-> Page de maintenance (HTML)
+## Role du projet
 
-## Stack technique
+Page statique de maintenance affichée lors des indisponibilités planifiées ou incidents.
 
-JavaScript / HTML / CSS
+## Statut
 
-## Installation
+- **Etat** : Faible activité
+- **Stack** : HTML/CSS statique
+- **Usage** : activation exceptionnelle
 
-```bash
-git clone https://github.com/LeBusMagique/maintenance.git
-cd maintenance
-```
+## Contenu
 
-```bash
-npm install
-npm run dev
-```
+- `index.html` : page unique de fallback.
 
+## Actions recommandées
 
-
-## Structure du projet
-
-- `index.html`
-
-## README original
-
-_Aucun README disponible._
-
----
-
-_Documentation générée automatiquement — 2026-05-22_
+- Ajouter une mini doc de déploiement (où et comment activer la page).
+- Prévoir des variantes (maintenance courte, incident majeur, retour prévu).
+- Vérifier régulièrement que le message et les liens de contact sont à jour.

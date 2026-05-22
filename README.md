@@ -1,74 +1,69 @@
-# 📚 Documentation — Le Bus Magique
+# Documentation Technique LeBusMagique
 
-> Documentation centralisée de tous les projets de l'organisation [LeBusMagique](https://github.com/LeBusMagique).
+Documentation de référence pour l’ensemble des dépôts de l’organisation `LeBusMagique`.
 
-_Générée automatiquement le 22/05/2026_
+## Objectif
 
----
+- Donner une vue claire de chaque projet (rôle, stack, statut, exploitation).
+- Faciliter les reprises de maintenance et les décisions de migration.
+- Centraliser les conventions pour éviter la dérive documentaire entre repos.
 
-## 🗂️ Projets
+## Cartographie des projets
 
-### 🖥️ Front-end & WebComponents
+| Projet | Domaine | Stack principale | Statut |
+|--------|---------|------------------|--------|
+| [lbm-documentation](./projects/lbm-documentation.md) | Documentation | Markdown | Actif |
+| [lebusmagique-api](./projects/lebusmagique-api.md) | API / Back-office | PHP, Symfony, JWT, Docker | Actif |
+| [lebusmagique-assets](./projects/lebusmagique-assets.md) | Front / WebComponents | Vue 3, Vite, Tailwind | Actif |
+| [lbm-observatory](./projects/lbm-observatory.md) | Front GW2 | React 16, Webpack 5 | Actif |
+| [lebusmagique-django](./projects/lebusmagique-django.md) | Backend expérimental GW2 | Python, Django | Expérimental |
+| [le-bot-magique](./projects/le-bot-magique.md) | Bot Discord | Python | Maintenance |
+| [le-correcteur-magique](./projects/le-correcteur-magique.md) | Bot rédaction | Python | Maintenance |
+| [twitch-giveaways](./projects/twitch-giveaways.md) | Outil stream | Node.js, Express, SQLite | Maintenance |
+| [lebusmagique-assets-old](./projects/lebusmagique-assets-old.md) | Legacy front | Grunt, SCSS | A archiver |
+| [lebusmagique-symfony-wordpress](./projects/lebusmagique-symfony-wordpress.md) | Legacy backend/site | Symfony, WordPress | A archiver |
+| [toolbox](./projects/toolbox.md) | Outil historique | Svelte, Rollup | Archive |
+| [lbm-connect](./projects/lbm-connect.md) | Bot Discord vérification | Node.js, discord.js | Archive |
+| [maintenance](./projects/maintenance.md) | Landing maintenance | HTML/CSS | Faible activité |
+| [newsletters](./projects/newsletters.md) | Templates communication | MJML, HTML | Faible activité |
 
-| Projet | Description | Stack | Statut |
-|--------|-------------|-------|--------|
-| [lebusmagique-assets](./projects/lebusmagique-assets.md) | WebComponents injectés sur le site | Vue 3 · Vite · Tailwind | ✅ Actif |
-| [lbm-observatory](./projects/lbm-observatory.md) | Suivi des quêtes GW2 | React 16 · Webpack 5 | ✅ Actif |
-| [lebusmagique-assets-old](./projects/lebusmagique-assets-old.md) | Assets legacy | Grunt · SCSS | ⚠️ À archiver |
+## Architecture cible (vision)
 
-### ⚙️ API & Back-end
-
-| Projet | Description | Stack | Statut |
-|--------|-------------|-------|--------|
-| [lebusmagique-api](./projects/lebusmagique-api.md) | API REST + back-office | Symfony 6 · PHP · JWT | ✅ Actif |
-| [lebusmagique-django](./projects/lebusmagique-django.md) | Backend expérimental GW2 | Django · Python | 🔬 Expérimental |
-| [lebusmagique-symfony-wordpress](./projects/lebusmagique-symfony-wordpress.md) | Génération 1 | Symfony + WordPress | ⚠️ À archiver |
-
-### 🤖 Bots & Outils
-
-| Projet | Description | Stack | Statut |
-|--------|-------------|-------|--------|
-| [le-bot-magique](./projects/le-bot-magique.md) | Bot Discord | Python | ✅ Actif |
-| [le-correcteur-magique](./projects/le-correcteur-magique.md) | Outil rédacteurs | Python | ✅ Actif |
-| [twitch-giveaways](./projects/twitch-giveaways.md) | Giveaways Twitch | JavaScript | 🔍 À évaluer |
-
-### 📦 Archivés
-
-| Projet | Description | Archivé |
-|--------|-------------|---------|
-| [toolbox](./projects/toolbox.md) | Boîte à outils | Jul 2022 |
-| [lbm-connect](./projects/lbm-connect.md) | Bot Discord vérification | Jun 2022 |
-| [newsletters](./projects/newsletters.md) | Sources newsletters | 2020 |
-| [maintenance](./projects/maintenance.md) | Page de maintenance | 2021 |
-
----
-
-## 🏗️ Architecture globale
-
-```
+```text
 LeBusMagique
-├── Front (Vercel)
-│   ├── lebusmagique-assets   → lbm-assets.vercel.app (WebComponents)
-│   └── lbm-observatory       → suivi quêtes GW2
-│
-├── API (serveur dédié)
-│   ├── lebusmagique-api      → API REST + back-office (Symfony)
-│   └── lebusmagique-django   → modules GW2 expérimentaux
-│
-└── Bots (serveur Discord)
-    ├── le-bot-magique        → bot Discord principal
-    └── le-correcteur-magique → outil rédacteurs
+├── Plateforme API
+│   ├── lebusmagique-api (socle principal)
+│   └── lebusmagique-django (modules GW2 à arbitrer)
+├── Expérience utilisateur
+│   ├── lebusmagique-assets (composants réutilisables)
+│   └── lbm-observatory (application dédiée quêtes)
+├── Automations communautaires
+│   ├── le-bot-magique
+│   ├── le-correcteur-magique
+│   └── twitch-giveaways
+└── Historique / patrimoine
+    ├── lebusmagique-assets-old
+    ├── lebusmagique-symfony-wordpress
+    ├── toolbox
+    ├── lbm-connect
+    ├── maintenance
+    └── newsletters
 ```
 
----
+## Priorités transverses 2025-2026
 
-## 🔗 Liens utiles
+- Finaliser la stratégie backend (`Symfony seul` vs `coexistence Django`).
+- Réduire le périmètre legacy en planifiant les archivages.
+- Standardiser les README, les scripts de lancement, les variables d’environnement.
+- Installer une routine de mise à jour de cette documentation à chaque chantier majeur.
 
-- [Organisation GitHub](https://github.com/LeBusMagique)
-- [Site Le Bus Magique](https://lebusmagique.fr)
-- [API GW2 officielle](https://api.guildwars2.com/v2)
-- [GitHub Project — Roadmap](https://github.com/orgs/LeBusMagique/projects)
+## Utilisation de ce dépôt
 
----
+- Entrée principale : `README.md`
+- Fiches détaillées : `projects/*.md`
+- Process de contribution : `CONTRIBUTING.md`
 
-_Cette documentation est générée automatiquement depuis les repos GitHub de l'organisation._
+## Sources
+
+- [Organisation LeBusMagique (liste des repos)](https://github.com/orgs/LeBusMagique/repositories)
+- [API Guild Wars 2](https://api.guildwars2.com/v2)

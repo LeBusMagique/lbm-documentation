@@ -1,31 +1,41 @@
 # Contribuer à la documentation
 
-Cette documentation est **générée automatiquement** depuis les repos GitHub de l'org LeBusMagique.
+## Principe
 
-## Mettre à jour la documentation
+La documentation est maintenue **manuellement** pour garantir des fiches explicites, orientées exploitation et décision.
+
+## Structure du dépôt
+
+```text
+lbm-documentation/
+├── README.md            # Portail global
+├── CONTRIBUTING.md      # Process de contribution
+└── projects/            # Une fiche par repository
+```
+
+## Format attendu pour une fiche projet
+
+Chaque fichier de `projects/` doit au minimum contenir :
+
+1. `Role du projet`
+2. `Statut`
+3. `Démarrage rapide` (si applicable)
+4. `Risques / dette identifiés`
+5. `Actions recommandées`
+
+## Workflow de contribution
 
 ```bash
-# Cloner le repo d'outils
 git clone https://github.com/LeBusMagique/lbm-documentation.git
-
-# Mettre à jour un projet spécifique
-GITHUB_TOKEN=xxx ANTHROPIC_API_KEY=xxx python3 create-lbm-docs.py
+cd lbm-documentation
+# Modifier README.md et/ou projects/*.md
+git add .
+git commit -m "docs: update project sheets"
+git push
 ```
 
-## Structure
+## Règles éditoriales
 
-```
-lbm-documentation/
-├── README.md              # Index de tous les projets
-├── CONTRIBUTING.md        # Ce fichier
-└── projects/
-    ├── lebusmagique-api.md
-    ├── lebusmagique-assets.md
-    ├── lbm-observatory.md
-    └── ...
-```
-
-## Modifier manuellement
-
-Les fichiers dans `projects/` peuvent être édités directement sur GitHub.
-Attention : ils seront écrasés à la prochaine génération automatique.
+- Rester factuel, court et actionnable.
+- Supprimer les contenus obsolètes au lieu de les empiler.
+- Aligner les statuts (`Actif`, `Maintenance`, `Expérimental`, `A archiver`, `Archive`).

@@ -1,47 +1,23 @@
 # lbm-connect
 
-> Bot Discord vérification users — archivé
+## Role du projet
 
-## Stack technique
+Bot Discord historique pour la vérification des utilisateurs.
+Le dépôt a servi de base à des workflows communautaires antérieurs.
 
-JavaScript / HTML / CSS
+## Statut
 
-## Installation
+- **Etat** : Archive
+- **Stack** : Node.js, discord.js
+- **Activité** : arrêtée
 
-```bash
-git clone https://github.com/LeBusMagique/lbm-connect.git
-cd lbm-connect
-```
+## Informations utiles
 
-```bash
-npm install
-npm run dev
-```
+- Point d’entrée historique : `bot.js`.
+- Dépendances principales : `discord.js`, `axios`, `dotenv`.
 
+## Actions recommandées
 
-## Scripts disponibles
-
-```bash
-npm run start  # node bot.js
-```
-
-## Dépendances principales
-
-`axios`, `discord.js`, `dotenv`, `form-data`
-
-
-## Structure du projet
-
-- `.gitignore`
-- `Procfile`
-- `bot.js`
-- `package-lock.json`
-- `package.json`
-
-## README original
-
-_Aucun README disponible._
-
----
-
-_Documentation générée automatiquement — 2026-05-22_
+- Conserver en archive sans nouvelles features.
+- Réutiliser uniquement comme référence si besoin de logique similaire.
+- Documenter les fonctionnalités encore vivantes dans les bots actifs.

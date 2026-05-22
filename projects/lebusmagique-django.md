@@ -1,61 +1,40 @@
 # lebusmagique-django
 
-> Backend expérimental (Django · modules GW2)
+## Role du projet
 
-## Stack technique
+Backend Django expérimental pour les modules GW2.
+Le dépôt contient des modèles métiers et des endpoints dédiés (pêche, homestead, wizard vault, etc.).
 
-Python
+## Statut
 
-## Installation
+- **Etat** : Expérimental
+- **Stack** : Python, Django
+- **Positionnement** : candidat d’intégration ou de migration vis-à-vis de `lebusmagique-api`
+
+## Démarrage rapide
 
 ```bash
 git clone https://github.com/LeBusMagique/lebusmagique-django.git
 cd lebusmagique-django
-```
-
-```bash
 pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
 ```
 
+## Portée fonctionnelle
 
+- Modules GW2 spécialisés avec structure de données déjà en place.
+- Base utile pour prototypes rapides en Python.
+- Source de comparaison pour choix d’architecture backend.
 
-## Structure du projet
+## Risques / dette identifiés
 
-- `.gitignore`
-- `app/__init__.py`
-- `app/asgi.py`
-- `app/settings_local.py`
-- `app/urls.py`
-- `app/wsgi.py`
-- `gw2/__init__.py`
-- `gw2/admin.py`
-- `gw2/apps.py`
-- `gw2/migrations/0001_initial.py`
-- `gw2/migrations/0002_alter_item_rarity.py`
-- `gw2/migrations/0003_alter_item_rarity.py`
-- `gw2/migrations/0004_alter_item_options.py`
-- `gw2/migrations/0005_currency_source.py`
-- `gw2/migrations/0006_alter_currency_options_alter_source_options_and_more.py`
-- `gw2/migrations/0007_alter_currency_data.py`
-- `gw2/migrations/0008_alter_item_data.py`
-- `gw2/migrations/__init__.py`
-- `gw2/models.py`
-- `gw2/signals.py`
-- `gw2/tests.py`
-- `gw2/urls.py`
-- `gw2/views.py`
-- `gw2_fishing/__init__.py`
-- `gw2_fishing/admin.py`
-- `gw2_fishing/apps.py`
-- `gw2_fishing/migrations/0001_initial.py`
-- `gw2_fishing/migrations/0002_alter_achievement_options_alter_bait_options_and_more.py`
-- `gw2_fishing/migrations/0003_time.py`
-- `gw2_fishing/migrations/0004_alter_fishhole_options_alter_time_options_daily.py`
+- Faible volume de commits par rapport au backend Symfony.
+- Pas de trajectoire documentée officielle sur le long terme.
+- Risque de duplication de logique métier entre deux backends.
 
-## README original
+## Actions recommandées
 
-_Aucun README disponible._
-
----
-
-_Documentation générée automatiquement — 2026-05-22_
+- Formaliser une décision architecture (`absorber`, `coexister`, `migrer`).
+- Documenter précisément les endpoints réellement utilisés.
+- Arrêter les développements parallèles non planifiés avant arbitrage.

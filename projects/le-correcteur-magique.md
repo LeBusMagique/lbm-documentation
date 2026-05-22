@@ -1,41 +1,39 @@
 # le-correcteur-magique
 
-> Outil de correction pour les rédacteurs (Python)
+## Role du projet
 
-## Stack technique
+Automatisation de correction/relecture pour l’équipe éditoriale.
+Le service notifie et assiste le flux rédactionnel (notamment via Discord/Trello).
 
-Python
+## Statut
 
-## Installation
+- **Etat** : Maintenance
+- **Stack** : Python
+- **Besoins actuels** : amélioration UX pour les rédacteurs non techniques
+
+## Démarrage rapide
 
 ```bash
 git clone https://github.com/LeBusMagique/le-correcteur-magique.git
 cd le-correcteur-magique
-```
-
-```bash
 pip install -r requirements.txt
+python main.py
 ```
 
+## Intégrations connues
 
+- Discord (notifications)
+- Trello (déclencheurs de workflow éditorial)
+- Potentiel futur avec API LBM pour enrichir les vérifications
 
-## Structure du projet
+## Risques / dette identifiés
 
-- `.gitignore`
-- `Procfile`
-- `main.py`
-- `readme.md`
-- `requirements.txt`
-- `runtime.txt`
+- Expérience orientée technique, peu accessible aux profils non dev.
+- Documentation d’exploitation limitée.
+- Couverture test non documentée.
 
-## README original
+## Actions recommandées
 
-# Le Correcteur Magique
-
-Un robot pour Discord qui envoie une notification lorsqu'une carte est déplacée dans la colonne "À relire" du Trello pour la gestion des contenus du Bus Magique ([lebusmagique.fr](https://www.lebusmagique.fr)).
-
-Réalisé par Thoanny
-
----
-
-_Documentation générée automatiquement — 2026-05-22_
+- Créer une interface web simple pour l’équipe rédaction.
+- Documenter les règles de correction et les scénarios de notification.
+- Ajouter un guide d’exploitation "qui fait quoi en cas d’erreur".
