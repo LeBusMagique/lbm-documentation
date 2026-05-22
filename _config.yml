@@ -1,0 +1,5 @@
+title: "LeBusMagique Documentation"
+description: "Documentation technique centralisée des projets LeBusMagique"
+theme: minima
+markdown: kramdown
+show_excerpts: false
